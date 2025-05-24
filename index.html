@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <style>
+    .container {
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .autocomplete,
+    .result {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      white-space: nowrap;
+    }
+
+    .result{
+      margin-top: 30px;
+    }
+
+    .autocomplete-item {
+      width: 100%;
+      text-align: left;
+      border-radius: 0%;
+      border: none;
+    }
+
+    .result-item {
+      border-width: 1px;
+      border-style: outset;
+      border-color: buttonborder;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .result-item-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      flex: 1 1 auto;
+    }
+
+    .remove-button {
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      width: 32px;
+      height: 32px;
+      padding: 0;
+    }
+
+    .autocomplete-item:hover,
+    .result-item:hover {
+      background-color: #d5d5d5;
+    }
+  </style>
+  <div class='container'>
+    <input id="search" type="text" placeholder="Поиск репозитория...">
+    <ul class="autocomplete"></ul>
+    <ul class="result"></ul>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
